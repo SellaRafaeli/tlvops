@@ -1,0 +1,35 @@
+<style>
+.ph-container {  
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  margin: 10px 0;
+  display: flex;  
+}
+.ph {
+  flex: 1;  
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  padding:20px;
+  border-radius:10px;
+  cursor: pointer;
+}
+.ph:hover {
+ /* text-decoration: underline;*/
+}
+.ph-left { 
+  background-color: aqua;
+}
+.ph-right {
+  background-color: lightblue;
+}
+</style>
+
+<div class='ph-container' onclick="document.location='/phrases/<%=ph[:pid]%>'">
+  <div class='ph ph-left'>
+    <%= ph['ru'] %>
+  </div>
+  <div class='ph ph-right'>
+    <%= ph['en'] %>    
+  </div>
+</div>

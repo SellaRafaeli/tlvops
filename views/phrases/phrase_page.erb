@@ -1,0 +1,10 @@
+<%
+  ph = $phrases.get(pid: pr[:pid])
+%>
+
+
+<%= erb :'phrases/single_phrase', locals: {ph: ph} %>
+
+<div>
+<label>Convo</label>: <a href='/convos/<%=ph[:conv_id]%>'> To conversation </a>
+</div>

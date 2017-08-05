@@ -1,0 +1,15 @@
+<style>
+.conv {
+  margin-bottom:10px;
+}
+</style>
+<% 
+  convos = $ph.all.mapo('conv').uniq - ['noop'] 
+%>
+
+<h1> Convos </h1>
+<% convos.each do |convo| %>
+  <div class='convo'>
+    <a href='/convos/<%=convo%>'><%=convo%></a>
+  </div>
+<% end %>
