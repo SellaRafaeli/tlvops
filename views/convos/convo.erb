@@ -1,0 +1,39 @@
+<style>
+.ph-container {  
+  width:50%;
+  /*margin-left:auto;*/
+  /*margin-right:auto;*/
+  margin: 10px 0;
+  display: flex;  
+}
+.ph {
+  flex: 1;  
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  padding:20px;
+  border-radius:10px;
+}
+.ph-left { 
+  background-color: aqua;
+}
+.ph-right {
+  background-color: lightblue;
+}
+</style>
+<%
+phrases = $phrases.get_many(conv: pr[:id])
+%>
+
+
+<h1> convo <%= pr[:id] %> </h1>
+
+<% phrases.each do |ph| %>
+<div class='ph-container'>
+  <div class='ph ph-left'>
+    <%= ph['ru'] %>
+  </div>
+  <div class='ph ph-right'>
+    <%= ph['en'] %>    
+  </div>
+</div>
+<% end %>
