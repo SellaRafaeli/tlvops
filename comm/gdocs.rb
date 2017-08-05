@@ -1,11 +1,3 @@
-GDOCS ||= {
-    foo: {
-      spreadsheet: "https://docs.google.com/spreadsheets/", 
-      json: "https://spreadsheets.google.com/feeds/public/values?alt=json",
-      collection: 'foo1'
-    },
-  }.hwia
-
 get '/admin/pull_gdoc' do
   #return {msg: "ok"}
   require_fields(['uri','col'])
@@ -24,3 +16,4 @@ def gdoc_to_rows_arr(uri)
 rescue => e
   {msg: e}
 end
+
