@@ -10,6 +10,39 @@
 .navbar-nav li a:hover {
     color: #1abc9c !important;
 }
+.ct {
+  text-align: center;
+}
+.fl {
+  display: flex;
+}
+.fl1 {
+  flex:1;
+}
+.space-around {
+  color: red;
+}
+.btn {
+  background-color: bisque;
+  padding: 20px;
+  /*display: inline-flex;*/
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1 {
+  background-color: lightblue;
+  padding:20px;
+  text-align: center
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.m10 {
+  margin:10px;
+}
 </style>
 
 <script>
@@ -17,8 +50,10 @@
 </script>
 <nav class="">
   <div>
-    <div class="navbar-header" >
-      <a class="navbar-brand" href="/" >home</a>
+    <div class="fl space-around" >
+      <a class="btn fl1 ct" href="/" >home</a>
+      <a class="btn fl1 ct" href="/convos">convos</a>
+      <a class="btn fl1 ct" href="/terms">terms</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right header-links">          

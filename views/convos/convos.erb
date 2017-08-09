@@ -1,6 +1,10 @@
 <style>
-.conv {
-  margin-bottom:10px;
+.convo {
+  margin-bottom:5px;  
+  background-color: greenyellow;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
 }
 </style>
 <% 
@@ -9,7 +13,7 @@
 
 <h1> Convos </h1>
 <% convos.each do |convo| %>
-  <div class='convo'>
-    <a href='/convos/<%=convo%>'><%=convo%></a>
+  <div class='convo w100'>
+    <a href='/convos/<%=convo%>'><%=convo.gsub('_',' ')%></a>
   </div>
 <% end %>

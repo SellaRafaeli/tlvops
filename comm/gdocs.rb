@@ -17,3 +17,8 @@ rescue => e
   {msg: e}
 end
 
+def set_coll_from_gdoc(coll,uri) 
+  coll.delete_many
+  gdoc_to_rows_arr(uri).each {|p| p[:_id]=p[:id]; coll.add(p) } 
+  "done. total: #{coll.count} in #{coll.name}"
+end
