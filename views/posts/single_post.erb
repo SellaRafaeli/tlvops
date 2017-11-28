@@ -1,0 +1,20 @@
+<%
+  name    = mark_match post['org_name']
+  address = mark_match post['address']
+  title   = mark_match post['title']
+  email   = mark_match post['email'] 
+  text    = mark_match post['text']
+%>
+
+<div class='single-post lightHover'>
+  <div onclick=postClick() class='cp'>
+    <b><%= name %></b> <small><%= address %></small> - <b> <%=title%> </b> (<%=email%>)
+  </div>
+  <div class='text <%="nd" unless pr[:q]%>'> <%= text %> </div>
+</div>
+
+<script>
+  window.postClick = window.postClick || function() {
+    $(event.currentTarget).closest('.single-post').find('.text').toggle('fast') 
+  }
+</script>

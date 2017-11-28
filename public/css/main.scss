@@ -1,0 +1,73 @@
+/* helpers */
+.nd { display: none }
+.cp, .pointer { cursor: pointer }
+.lightHover:hover { box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1); }
+.zlightHover:hover { filter: brightness(150%); }
+/* re-usables */
+.match {
+  background-color: gold;
+  font-weight: bold;
+  padding:10px;
+}
+.card1 {
+  border:1px solid black;
+  min-height:10px;
+  background-color: white;
+  margin:10px;
+  padding: 10px;
+}
+
+/* forms */
+form.f1 {
+  input, textarea, select {
+    display: block;
+    margin:10px;
+    border:none;
+    border-bottom:2px solid whitesmoke;
+    padding-bottom:2px;
+    /*border-radius:10px;*/
+    font-size:20px;
+    resize: vertical;
+    min-height: 20px;
+    width: 450px;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top:20px;
+  }
+
+  button {
+    cursor: pointer;
+    font-size:30px;
+    background-color: darkgrey;
+    color:white;
+    padding:10px;
+    &:hover {
+      background-color: black;
+    }
+  }
+} 
+
+/*** parts ***/
+
+/* body */
+body {
+  font-family: Georgia;
+}
+
+/* posts-list */
+.posts-list {
+  
+  .single-post {
+    background-color: lightgrey;
+    margin-top: 10px;
+    padding:10px;
+    .text {
+      margin-top:10px;
+      border:1px solid grey;
+      padding:10px;
+    }
+  }
+}

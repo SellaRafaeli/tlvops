@@ -1,7 +1,7 @@
 $users = $mongo.collection('users')
 
 get '/register' do
-  erb :'users/signup_page', layout: :layout
+  erb :'users/register', layout: :layout
 end
 
 post '/register' do

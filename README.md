@@ -1,12 +1,1 @@
-Language-Learning.
-
-Next steps:
------------
-
-- 'phrase' view 
-
-
-Future:
--------
-conversations with plot 
-
+$ filewatcher '**/*.scss' 'scss $FILENAME > $FILENAME.css; echo "created"-$FILENAME; date'

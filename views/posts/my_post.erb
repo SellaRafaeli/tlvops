@@ -1,0 +1,22 @@
+<h1> You're Hiring! </h1>
+
+<form class='f1' action='/my_post' method='post'>
+  <label>Company Name</label><input name="org_name" placeholder='company name' value="<%=post['org_name']%>">
+  <label>Address</label><input name="address"  placeholder='your address' value="<%=post['address']%>">
+  
+  <label>Number of Employees</label>
+  <select name="num_employees">
+    <option value="1-10" <%="selected" if post['num_employees']=='1-10'%>>1-10 Employees</option>
+    <option value="10-50" <%="selected" if post['num_employees']=='10-50'%>>10-50 Employees</option>
+    <option value="50-100" <%="selected" if post['num_employees']=='50-100'%>>50-100 Employees</option>  
+    <option value="100-1000" <%="selected" if post['num_employees']=='100-500'%>>100-500 Employees</option>  
+    <option value="1000+" <%="selected" if post['num_employees']=='1000+'%>>1000+ Employees</option>  
+  </select>
+  
+  <label>Post Title</label>
+  <input name="title"  placeholder='post title' value="<%=post['title']%>">
+  
+  <label>Text</label>
+  <textarea name=text placeholder='what are you looking for?'><%=post['text']%></textarea>
+  <button>Submit</button>
+</form>

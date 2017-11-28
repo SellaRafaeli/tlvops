@@ -1,7 +1,16 @@
 $roles = $mongo.collection('roles')
 
-get '/terms' do
-  erb :'terms/terms', layout: :layout, locals: params
+ROLE_FIELDS = ['org_name', 'title', 'address']
+
+get '/post_role' do
+  erb :'roles/post_role', layout: :layout, locals: params
+end
+
+post '/role' do
+  require_user
+  require_fields(ROLE_FIELDS)
+  data = pr.just(ROLE_FIELDS)
+  $roles.add
 end
 
 

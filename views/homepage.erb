@@ -1,4 +1,9 @@
-<h2> Jobs </h2>
-<% $roles.all.each do |role| %>
-<%= erb :'single_role', locals: {role: role} %>
-<% end %>
+<h2> Who's Hiring? </h2>
+<a href='/?q=frontend'>#frontend</a>
+<a href='/?q=backend'>#backend</a>
+
+<div class='posts-list'>
+  <% get_posts.each do |post| %>
+  <%= erb :'posts/single_post', locals: {post: post} %>
+  <% end %>
+</div>
