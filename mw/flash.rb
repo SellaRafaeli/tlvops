@@ -25,3 +25,5 @@ helpers do
     @flash ||= FlashMessage.new(session)
   end
 end
+
+get '/refresh' do :true end

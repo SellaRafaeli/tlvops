@@ -13,7 +13,7 @@ Bundler.require
 
 Dotenv.load
 
-$app_name   = 'ok'
+$app_name   = 'tlvops'
 
 require './setup'
 require './my_lib'
@@ -28,7 +28,7 @@ require_all './mw'
 include Helpers #makes helpers globally available 
 
 get '/ping' do
-  {msg: "pong from #{$app_name}", val: 'CarWaiting (is the new TrainSpotting)'}
+  {msg: "pong from #{$app_name}", val: 'TLVOPS (is the new TrainSpotting)'}
 end
 
 get '/me' do

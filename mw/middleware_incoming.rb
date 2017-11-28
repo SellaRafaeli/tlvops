@@ -19,6 +19,10 @@ def request_expects_json?
   request.xhr? || request.path_info.starts_with?('/api')
 end
 
+def pr
+  params rescue {}
+end
+
 def print(text)
   console.log(text)
 end

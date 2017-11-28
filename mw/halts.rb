@@ -14,8 +14,14 @@ def halt_bad_input(opts = {})
   halt(403, {msg: opts[:msg] || "Bad input."}) 
 end
 
+def halt_back(msg = 'Sorry!')
+  flash.message = msg if msg
+  redirect back
+end
+
 def halt_missing_param(field)
-  halt(403, {msg: "Missing field: #{field}"}) 
+  halt_back "Missing field: #{field}"
+  #halt(403, {msg: "Missing field: #{field}"}) 
 end
 
 def halt_item_exists(field, val = nil)
@@ -36,4 +42,9 @@ end
 
 get '/halts' do
   {msg: 'halt!'}
+end
+
+get '/flash' do
+  flash.message = 'bla'
+  redirect '/'
 end

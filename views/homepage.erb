@@ -1,3 +1,4 @@
-<h1> OK1K </h1>
-
-<a href='/convos'> Convos </a>
+<h2> Jobs </h2>
+<% $roles.all.each do |role| %>
+<%= erb :'single_role', locals: {role: role} %>
+<% end %>

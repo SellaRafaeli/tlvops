@@ -30,16 +30,16 @@
   text-transform: uppercase;
 }
 
-h1 {
+/*h1 {
   background-color: lightblue;
   padding:20px;
   text-align: center
 }
-
-a {
+*/
+/*a {
   text-decoration: none;
   color: black;
-}
+}*/
 .m10 {
   margin:10px;
 }
@@ -48,12 +48,12 @@ a {
 <script>
   window.cu = <%= cu.to_json %>;
 </script>
+<% if false %>
 <nav class="">
   <div>
     <div class="fl space-around" >
-      <a class="btn fl1 ct" href="/" >home</a>
-      <a class="btn fl1 ct" href="/convos">convos</a>
-      <a class="btn fl1 ct" href="/terms">terms</a>
+      <a class="btn fl1 ct" href="/" >tlvops</a>
+      <a class="btn fl1 ct" href="/signup_page" >sign up</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right header-links">          
@@ -66,4 +66,23 @@ a {
     </div>
   </div>
 </nav>
-
+<% end %>
+<nav style='background-color:whitesmoke; padding:20px'>
+  <span style='float:left'>
+    <a href='/'>tlvops</a>
+    <!-- <a href='/post'>post</a> -->
+    <% if cu %>
+      <span href='/me'>(<%=cu['email']%>)</span>
+    <% end %>
+  </span>
+  <span style='float:right'>    
+    
+    <% if cu %>
+      <a href='/logout'>logout</a>
+    <% else %>
+      <a href='/register'>register</a>
+      <a href='/login'>login</a>
+    <% end %>
+  </span>
+  <div style='clear:both'></div>
+</nav>

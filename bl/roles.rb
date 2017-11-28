@@ -1,4 +1,4 @@
-$terms = $mongo.collection('terms')
+$roles = $mongo.collection('roles')
 
 get '/terms' do
   erb :'terms/terms', layout: :layout, locals: params
