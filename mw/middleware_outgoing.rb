@@ -10,8 +10,12 @@ after do
 end
 
 def mark_match(str,query = nil)
-  query ||= pr[:q]
-  str.to_s.gsub(/#{query}/i,"<span class='match'>#{query}</span>")
+  if pr[:q]
+    query ||= pr[:q]
+    str.to_s.gsub(/#{query}/i,"<span class='match'>#{query}</span>")
+  else 
+    str
+  end
 end
 
 get '/mw/outgoing' do 'refresh' end

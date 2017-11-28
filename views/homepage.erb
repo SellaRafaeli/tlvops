@@ -1,6 +1,10 @@
 <h2> Who's Hiring? </h2>
+<a href='/'>recent</a>
 <a href='/?q=frontend'>#frontend</a>
 <a href='/?q=backend'>#backend</a>
+<a href='/?q=junior'>#junior</a>
+<form style='display:inline' action='/' method=get><input name=q placeholder=search /><button>submit</button></form>
+
 
 <div class='posts-list'>
   <% get_posts.each do |post| %>
